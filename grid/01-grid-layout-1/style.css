@@ -1,13 +1,29 @@
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
 }
+
+/* 
+- The gap is 15px
+- The grid has two columns
+- The grid has four rows
+- The second column is three times larger than the first
+- The third row is five times larger than the others
+- The header and footer elements span across both columns
+- The sidebar element only spans across the first column
+- The nav and article elements span across the second column
+*/
 
 .container {
   text-align: center;
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+  display: grid;
+  gap: 15px;
+  grid-template: 1fr 1fr 5fr 1fr / 1fr 3fr;
+
 }
 
 .container div {
@@ -20,19 +36,29 @@ body, html {
 }
 
 .header {
-  background-color: #FFDE22;
+  background-color: #006157;
+
+  grid-area: 1 / 1 / span 1 / span 2;
 }
 
 .sidebar {
-  background-color: #FF7755;
+  background-color: #005B94;
+  grid-area: 2 / 1 / 4 / 1;
 }
 
 .nav {
-  background-color: #00DDFF;
+  background-color: #642cde;
+  grid-area: 2 / 2 / 3 / 2;
 }
 
 .article {
-  background-color: #bccbde;
+  background-color: #7E1DC3;
+  grid-area: 3 / 2 / 4 / 2;
+}
+
+.footer {
+  background-color: #393f4d;
+  grid-area: 4 / 1 / span 1 / span 2;
 }
 
 .article p {
@@ -40,8 +66,4 @@ body, html {
   font-family: sans-serif;
   color: white;
   text-align: left;
-}
-
-.footer {
-  background-color: #393f4d;
 }
