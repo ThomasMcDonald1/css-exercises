@@ -89,3 +89,80 @@
   font-size: 13px;
   font-weight: normal;
 }
+
+/******** My Solution ********/
+
+.container
+{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 4px;
+}
+
+.header
+{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.logo
+{
+  justify-self: start;
+}
+
+.menu
+{
+  align-self: center;
+}
+
+.menu ul
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.nav ul
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.sidebar
+{
+  display: grid;
+  gap: 50px;
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+}
+
+.photo, .side-content
+{
+  align-content: center;
+}
+
+ul, li
+{
+  list-style-type: none;
+}
+
+.article
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.nav, .article
+{
+  grid-column: 2 / 3;
+}
+
+.card
+{
+  height: 200px;
+}
+
+.header, .footer
+{
+  grid-column: 1 / 3;
+}
